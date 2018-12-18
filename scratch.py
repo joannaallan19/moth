@@ -1,4 +1,7 @@
+#to keep track of how long it's been since the user wore an item, etc.
 from datetime import datetime
+
+#types of clothing will be sorted into the following dictionaries:
 
 top = {}
 bottom = {}
@@ -6,6 +9,9 @@ both = {}
 shoe = {}
 accessory = {}
 
+#the next 5 functions keep track of how many times each item has been worn and when was last worn by adding one to
+#the count & updating the time to the time the item is selected as worn by using the now function from datetime. Both
+#these pieces of info are kept as values to keys to one of the dictionaries within the proper dictionary
 
 def top_worn(key):
     now = datetime.now()
@@ -32,7 +38,10 @@ def accessory_worn(key):
     accessory[key]['Times_Worn']+=1
     accessory[key]['Last_Time_Worn']=now
 
-
+#Each item type is a separate dictionary. Within that dictionary each item is it's own dictionary with the values
+# containing the different pieces of the item name and the count of how many types it's been worn, when it
+#was first worn, and when it was last worn. The following function sets up a unique name for each item dictionary/key
+#within the type dictionary & adds the item dictionary/key to the type dictionary
 
 def newitem():
     now = datetime.now()
@@ -87,9 +96,9 @@ def newitem():
         print('Moth does not recognize your answer. Please check your spelling and try again.')
         newitem()
 
-#skeleton=newitem()
-#print(accessory_worn(skeleton))
-#print(accessory)
+#the next function allows a user to pick what they're going to wear. input should be a number, not words.
+#you can look at all the clothing items at once or by type
+
 
 def openCloset():
     choice2=input("\n1. Tops\n2. Bottoms\n3. Both(ie dress or jumper)\n 4. Shoes\n5. Accessories\n6. Full Closet\n7. Done\n")
@@ -237,6 +246,10 @@ def openCloset():
         openCloset()
 
 #def recommend():
+# This is the main menu to which you should always navigate back. It will let you pick your own outfit,
+# get a recommendation, or add another item to the dictionaries. Or rather, it lets you navigate to the
+#functions that do these things
+
 
 def menu():
 
@@ -264,6 +277,9 @@ def intro():
         menu()
     else:
         intro()
+
+#now that the functions have been created, we can actually use them. the program visibly starts running here.
+# it starts you off by making you put some items in the dictionaries of your closet so that you can later manipulate them.
 
 print("""Fill your Moth closet""")
 newitem()
