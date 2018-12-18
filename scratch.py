@@ -281,6 +281,6 @@ def intro():
 #now that the functions have been created, we can actually use them. the program visibly starts running here.
 # it starts you off by making you put some items in the dictionaries of your closet so that you can later manipulate them.
 
-print("""Fill your Moth closet""")
+print("Fill your Moth closet")
 newitem()
 intro()
