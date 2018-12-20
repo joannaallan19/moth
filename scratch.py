@@ -148,7 +148,7 @@ def openCloset():
         toWear=input("""Found something you'd like to wear?\n1.Yes\n2. No""")
         if toWear=='1':
             toWearType= input("What type of item is it?").lower()
-            print("1. Top\n2. Bottom\n3. Both\n4.Accessory\n5.Shoes")
+            print("\n1. Top\n2. Bottom\n3. Both\n4.Accessory\n5.Shoes")
             if toWearType=='top' or ' top':
                 choice3=int(input("Wear Top Number:\n"))
                 choice4=topList[choice3]
@@ -179,30 +179,32 @@ def openCloset():
     if choice2== '6':
         fullCloset()
     elif choice2== '1':
+        print("TOPS")
         topList= []
         listNumber= 0
         for item in top.keys():
             topList.append(item)
             print(listNumber,'. ',item)
             listNumber+=1
-        toWear=input("""Found something you'd like to wear?\n 1.Yes \2. No""")
+        toWear=input("""Found something you'd like to wear?\n 1.Yes \2. No\n""")
         if toWear=='1':
-            choice3=int(input("Wear Item Number:\n"))
+            choice3=int(input("Wear Top Number:\n"))
             choice4=topList[choice3]
             top_worn(choice4)
             openCloset()
         else:
             openCloset()
     elif choice2=='2':
+        print("BOTTOMS")
         bottomList= []
         listNumber= 0
         for item in bottom.keys():
             bottomList.append(item)
             print(listNumber,'. ',item)
             listNumber+=1
-        toWear=input("""Found something you'd like to wear?\n1.Yes\2. No""")
+        toWear=input("""Found something you'd like to wear?\n1.Yes\n2. No\n""")
         if toWear=='1':
-            choice3=int(input("Wear Item Number:\n"))
+            choice3=int(input("Wear Bottom Number:\n"))
             choice4=bottomList[choice3]
             bottom_worn(choice4)
             openCloset()
@@ -211,28 +213,30 @@ def openCloset():
     elif choice2=='3':
         bothList= []
         listNumber= 0
-        for item in top.keys():
+        print("BOTH")
+        for item in both.keys():
             bothList.append(item)
             print(listNumber,'. ',item)
             listNumber+=1
-        toWear=input("""Found something you'd like to wear?\n1.Yes\2. No""")
+        toWear=input("""Found something you'd like to wear?\n1.Yes\n2. No\n""")
         if toWear=='1':
-            choice3=int(input("Wear Item Number:\n"))
+            choice3=int(input("Wear Both Number:\n"))
             choice4=bothList[choice3]
             both_worn(choice4)
             openCloset()
         else:
             openCloset()
     elif choice2=='4':
+        print("SHOES")
         shoeList= []
         listNumber= 0
-        for item in top.keys():
+        for item in shoe.keys():
             shoeList.append(item)
             print(listNumber,'. ',item)
             listNumber+=1
-        toWear=input("""Found something you'd like to wear?\n1.Yes\2. No""")
+        toWear=input("""Found something you'd like to wear?\n1.Yes\n2. No\n""")
         if toWear=='1':
-            choice3=int(input("Wear Item Number:\n"))
+            choice3=int(input("Wear Shoes Number:\n"))
             choice4=shoeList[choice3]
             shoe_worn(choice4)
             openCloset()
@@ -240,13 +244,14 @@ def openCloset():
         else:
             openCloset()
     elif choice2=='5':
+        print("ACCESSORIES")
         accessoryList= []
         listNumber= 0
-        for item in top.keys():
+        for item in accessory.keys():
             accessoryList.append(item)
             print(listNumber,'. ',item)
             listNumber+=1
-        toWear=input("""Found something you'd like to wear?\n1.Yes\2. No""")
+        toWear=input("""Found something you'd like to wear?\n1.Yes\n2. No\n""")
         if toWear=='1':
             choice3=int(input("Wear Item Number:\n"))
             choice4=accessoryList[choice3]
