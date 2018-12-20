@@ -19,12 +19,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="6589" />
+          <entry key="py" value="7472" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="6589" />
+          <entry key="Python" value="7472" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -53,13 +53,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scratch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="283" column="7" lean-forward="true" selection-start-line="283" selection-start-column="7" selection-end-line="283" selection-end-column="7" />
+            <state relative-caret-position="-1235">
+              <caret line="118" column="34" lean-forward="true" selection-start-line="118" selection-start-column="34" selection-end-line="118" selection-end-column="34" />
               <folding>
-                <marker date="1545164442446" expanded="true" signature="226:566" ph="..." />
-                <marker date="1545164442446" expanded="true" signature="4719:7091" ph="..." />
-                <marker date="1545164442446" expanded="true" signature="9644:9906" ph="..." />
-                <marker date="1545164442446" expanded="true" signature="9663:9906" ph="..." />
+                <marker date="1545343455147" expanded="true" signature="226:566" ph="..." />
+                <marker date="1545343455147" expanded="true" signature="4854:7589" ph="..." />
+                <marker date="1545343455147" expanded="true" signature="10178:10440" ph="..." />
+                <marker date="1545343455147" expanded="true" signature="10197:10440" ph="..." />
               </folding>
             </state>
           </provider>
@@ -86,8 +86,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="745" />
-    <option name="width" value="998" />
+    <option name="x" value="834" />
+    <option name="y" value="61" />
+    <option name="width" value="1058" />
     <option name="height" value="1026" />
   </component>
   <component name="ProjectView">
@@ -157,14 +158,14 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="497" y="0" width="665" height="684" extended-state="0" />
+    <frame x="556" y="41" width="705" height="684" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27707008" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26047903" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -189,13 +190,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scratch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="283" column="7" lean-forward="true" selection-start-line="283" selection-start-column="7" selection-end-line="283" selection-end-column="7" />
+        <state relative-caret-position="-1235">
+          <caret line="118" column="34" lean-forward="true" selection-start-line="118" selection-start-column="34" selection-end-line="118" selection-end-column="34" />
           <folding>
-            <marker date="1545164442446" expanded="true" signature="226:566" ph="..." />
-            <marker date="1545164442446" expanded="true" signature="4719:7091" ph="..." />
-            <marker date="1545164442446" expanded="true" signature="9644:9906" ph="..." />
-            <marker date="1545164442446" expanded="true" signature="9663:9906" ph="..." />
+            <marker date="1545343455147" expanded="true" signature="226:566" ph="..." />
+            <marker date="1545343455147" expanded="true" signature="4854:7589" ph="..." />
+            <marker date="1545343455147" expanded="true" signature="10178:10440" ph="..." />
+            <marker date="1545343455147" expanded="true" signature="10197:10440" ph="..." />
           </folding>
         </state>
       </provider>

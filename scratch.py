@@ -45,7 +45,7 @@ def accessory_worn(key):
 
 def newitem():
     now = datetime.now()
-    webster= input("Is it a top, bottom, both(i.e. dress or jumper), accessory, or pair of shoes?\n").lower()
+    webster= input("Is this item a top, bottom, both(i.e. dress or jumper), accessory, or shoes?\n").lower()
     if webster == 'top' or webster == ' top':
         piece0= input('Type of top:')
         piece1 = input('Brand:')
@@ -98,6 +98,8 @@ def newitem():
 
 #the next function allows a user to pick what they're going to wear. input should be a number, not words.
 #you can look at all the clothing items at once or by type
+# the list becomes visible for the user to select an item.
+# that numerical selection is then used to index their item out of the list.
 
 
 def openCloset():
@@ -105,42 +107,53 @@ def openCloset():
     def fullCloset():
         topList= []
         toplistNumber= 0
+        print("TOPS")
         for item in top.keys():
             topList.append(item)
-            print(toplistNumber,'. ',item)
+            print(toplistNumber,'. ',item,)
             toplistNumber+=1
+        print("\n")
         bottomList= []
         bottomlistNumber= 0
+        print("BOTTOMS")
         for item in bottom.keys():
             bottomList.append(item)
             print(bottomlistNumber,'. ',item)
             bottomlistNumber+=1
+        print("""\n""")
         bothList= []
         bothlistNumber= 0
-        for item in top.keys():
+        print("""BOTH (ie dresses, jumpers, etc.)""")
+        for item in both.keys():
             bothList.append(item)
             print(bothlistNumber,'. ',item)
             bothlistNumber+=1
+        print("\n")
         shoeList= []
         shoelistNumber= 0
-        for item in top.keys():
+        print("SHOES")
+        for item in shoe.keys():
             shoeList.append(item)
             print(shoelistNumber,'. ',item)
             shoelistNumber+=1
+        print("\n")
         accessoryList= []
         accessorylistNumber= 0
-        for item in top.keys():
+        print("ACCESSORIES")
+        for item in accessory.keys():
             accessoryList.append(item)
             print(accessorylistNumber,'. ',item)
             accessorylistNumber+=1
-        toWear=input("""Found something you'd like to wear?\n1.Yes\2. No""")
-        if toWear==1
+        print("\n")
+        toWear=input("""Found something you'd like to wear?\n1.Yes\n2. No""")
+        if toWear=='1':
             toWearType= input("What type of item is it?").lower()
+            print("1. Top\n2. Bottom\n3. Both\n4.Accessory\n5.Shoes")
             if toWearType=='top' or ' top':
                 choice3=int(input("Wear Top Number:\n"))
                 choice4=topList[choice3]
                 top_worn(choice4)
-            elif toWearType=='bottom' or ' bottom':
+            elif toWearType=='bottom' or ' bottom' or 'bottoms':
                 choice3=int(input("Wear Bottom Number:\n"))
                 choice4=bottomList[choice3]
                 bottom_worn(choice4)
@@ -157,9 +170,9 @@ def openCloset():
                 choice4=bottomList[choice3]
                 bottom_worn(choice4)
             else:
-            print("Moth does not recognize your selection. Please check your spelling and try again.")
-            fullCloset()
-        if toWear== 2:
+                print("Moth does not recognize your selection. Please check your spelling and try again.")
+                fullCloset()
+        if toWear== '2':
             menu()
         else:
             fullCloset()
@@ -172,8 +185,8 @@ def openCloset():
             topList.append(item)
             print(listNumber,'. ',item)
             listNumber+=1
-        toWear=input("""Found something you'd like to wear?\n1.Yes\2. No""")
-        if toWear==1:
+        toWear=input("""Found something you'd like to wear?\n 1.Yes \2. No""")
+        if toWear=='1':
             choice3=int(input("Wear Item Number:\n"))
             choice4=topList[choice3]
             top_worn(choice4)
@@ -188,7 +201,7 @@ def openCloset():
             print(listNumber,'. ',item)
             listNumber+=1
         toWear=input("""Found something you'd like to wear?\n1.Yes\2. No""")
-        if toWear==1:
+        if toWear=='1':
             choice3=int(input("Wear Item Number:\n"))
             choice4=bottomList[choice3]
             bottom_worn(choice4)
@@ -203,7 +216,7 @@ def openCloset():
             print(listNumber,'. ',item)
             listNumber+=1
         toWear=input("""Found something you'd like to wear?\n1.Yes\2. No""")
-        if toWear==1:
+        if toWear=='1':
             choice3=int(input("Wear Item Number:\n"))
             choice4=bothList[choice3]
             both_worn(choice4)
@@ -218,11 +231,12 @@ def openCloset():
             print(listNumber,'. ',item)
             listNumber+=1
         toWear=input("""Found something you'd like to wear?\n1.Yes\2. No""")
-        if toWear==1:
+        if toWear=='1':
             choice3=int(input("Wear Item Number:\n"))
             choice4=shoeList[choice3]
             shoe_worn(choice4)
             openCloset()
+            print(shoe)
         else:
             openCloset()
     elif choice2=='5':
@@ -233,7 +247,7 @@ def openCloset():
             print(listNumber,'. ',item)
             listNumber+=1
         toWear=input("""Found something you'd like to wear?\n1.Yes\2. No""")
-        if toWear==1:
+        if toWear=='1':
             choice3=int(input("Wear Item Number:\n"))
             choice4=accessoryList[choice3]
             accessory_worn(choice4)
@@ -281,6 +295,6 @@ def intro():
 #now that the functions have been created, we can actually use them. the program visibly starts running here.
 # it starts you off by making you put some items in the dictionaries of your closet so that you can later manipulate them.
 
-print("Fill your Moth closet")
+print("""Fill your moth closet.""")
 newitem()
 intro()
