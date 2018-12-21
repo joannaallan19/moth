@@ -38,6 +38,13 @@ def accessory_worn(key):
     accessory[key]['Times_Worn']+=1
     accessory[key]['Last_Time_Worn']=now
 
+#eventually there will be a stats function for each of the sub-closets,
+#But I've only gotten as far as to make one to see if I can get it to work
+
+def top_stats(key):
+    print("Worn",top[key]['Times_Worn'],"times.")
+    print("Last worn on", top[key]['Last_Time_Worn'])
+
 #Each item type is a separate dictionary. Within that dictionary each item is it's own dictionary with the values
 # containing the different pieces of the item name and the count of how many types it's been worn, when it
 #was first worn, and when it was last worn. The following function sets up a unique name for each item dictionary/key
@@ -186,6 +193,7 @@ def openCloset():
             topList.append(item)
             print(listNumber,'. ',item)
             listNumber+=1
+            print(top_stats(item))
         toWear=input("""Found something you'd like to wear?\n 1.Yes \2. No\n""")
         if toWear=='1':
             choice3=int(input("Wear Top Number:\n"))
